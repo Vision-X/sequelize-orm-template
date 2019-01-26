@@ -51,7 +51,7 @@
 
 var Character = require("../models/character.js");
 
-module.exports = function(app) {
+module.exports = ((app) => {
   app.get("/api/:characters?", (req, res) => {
     if (req.params.characters) {
       Character.findOne({
@@ -70,9 +70,7 @@ module.exports = function(app) {
 
   app.post("/api/new", (req, res) => {
     let character = req.body;
-
     let routeName = character.name.replace(/\s+/g, "").toLowerCase();
-
     Character.create({
       routeName: routeName,
       name: character.name,
@@ -82,4 +80,4 @@ module.exports = function(app) {
     });
     res.status(204).end();
   });
-};
+});
