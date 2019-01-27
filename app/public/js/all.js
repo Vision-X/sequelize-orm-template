@@ -2,7 +2,7 @@
 // It pings the server. The server then pings the database and displays all of the characters.
 
 // make a get request to our api to grab every character
-$.get("/api", function(data) {
+$.get("/api", (data) => {
 
   // for each character that our server sends us back
   for (var i = 0; i < data.length; i++) {

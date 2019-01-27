@@ -2,7 +2,7 @@
 // Effectively it takes the form inputs then sends it to the server to save in the DB.
 
 // when user clicks add-btn
-$("#add-btn").on("click", function(event) {
+$("#add-btn").on("click", (event) => {
   event.preventDefault();
 
   // make a newCharacter obj

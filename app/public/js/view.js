@@ -3,7 +3,7 @@
 // URL parameter. Our server then performs the search to grab that character from the Database.
 
 // when user hits the search-btn
-$("#search-btn").on("click", function() {
+$("#search-btn").on("click", () => {
   // save the character they typed into the character-search input
   var searchedCharacter = $("#character-search")
     .val()
